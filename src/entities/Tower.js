@@ -1,4 +1,4 @@
-// Tower: placeable defense structure with targeting and firing logic
+// Tower: placeable defence structure with targeting and firing logic
 
 class Tower {
   constructor(scene, col, row, type, cfg) {
