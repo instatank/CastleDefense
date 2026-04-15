@@ -24,7 +24,7 @@ class MenuScene extends Phaser.Scene {
       stroke: '#8B4513', strokeThickness: 6, shadow: { color: '#000', blur: 10, fill: true }
     }).setOrigin(0.5);
 
-    this.add.text(width/2, 200, 'DEFENSE', {
+    this.add.text(width/2, 200, 'DEFENCE', {
       fontSize: '72px', fontFamily: 'serif', color: '#e88020',
       stroke: '#8B4513', strokeThickness: 6, shadow: { color: '#000', blur: 10, fill: true }
     }).setOrigin(0.5);
