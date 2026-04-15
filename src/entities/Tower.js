@@ -67,9 +67,16 @@ class Tower {
       g.fillCircle(cx - half*0.6, cy - half*0.3, 2); g.fillCircle(cx + half*0.6, cy - half*0.5, 2);
     }
 
-    // Upgraded badge
+    // Upgraded badge — manual 5-point star via fillPoints
     if (this.upgraded) {
-      g.fillStyle(0xf0c040); g.fillStar(cx + half - 4, cy - half + 4, 5, 5, 3);
+      const sx = cx + half - 4, sy = cy - half + 4;
+      const pts = [];
+      for (let i = 0; i < 10; i++) {
+        const angle = (i * Math.PI) / 5 - Math.PI / 2;
+        const r = i % 2 === 0 ? 5 : 2.5;
+        pts.push({ x: sx + Math.cos(angle) * r, y: sy + Math.sin(angle) * r });
+      }
+      g.fillStyle(0xf0c040); g.fillPoints(pts, true);
     }
   }
 
